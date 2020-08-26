@@ -1,0 +1,302 @@
+@font-face {
+    font-family: "Howie";
+    src: url(../fonts/Howie_s_Funhouse.ttf);
+}
+
+@font-face {
+    font-family: "Circular";
+    src: url(../fonts/Circular\ Std\ Book.ttf);
+}
+
+* {
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.carousel {
+    width: 100%;
+
+}
+
+.item img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.logo {
+    display: grid;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    left: 0;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.filtro {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: 'Circular', sans-serif;
+}
+
+.filtro h1 {
+    font-size: large;
+    display: inline-block;
+}
+
+.grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: #F5F5F5;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+select {
+    border-color: #38205E;
+    background-image: url(../img/svg/select.svg);
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    padding: 0.7rem 3rem 0.5rem 0.7rem;
+    transition: all 0.25s ease;
+    margin-left: 1rem;
+    font-family: 'Circular', sans-serif;
+}
+
+option {
+    font-family: 'Circular', sans-serif;
+}
+
+.card .card-content {
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+.card .card-content div {
+    margin: 1rem auto;
+}
+
+.card .card-content .titulo h1 {
+    font-size: 22px;
+    letter-spacing: 1.44px;
+    font-family: 'Howie';
+}
+
+.card .card-content .valor {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.subrayado {
+    position: relative;
+}
+
+.subrayado::after {
+    border-bottom: 0.1em solid black;
+    content: "";
+    left: 0;
+    margin-top: calc(0.1em / 2 * -1);
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+
+.valor {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+.valor .ahora h1 b {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.92px;
+}
+
+.valor .antes h1 {
+    font-weight: 400;
+    font-size: 19px;
+    letter-spacing: 1.536px;
+}
+
+.dscto h2 {
+    font-weight: normal;
+    font-size: 22px;
+}
+
+.tipo h3 {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 12px;
+}
+
+.card .card-content .tipo {
+    margin-bottom: 3.5rem;
+}
+
+.comprar {
+    display: block;
+}
+
+.comprar a {
+    background-color: #EBB700;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0.7rem 1.2rem;
+    text-decoration: none;
+    width: 30%;
+}
+
+figure.imagen {
+    position: relative;
+}
+
+.dividendo,
+.entrega {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    background-color: #38205ea1;
+}
+
+.dividendo {
+    width: 75%;
+}
+
+.entrega {
+    bottom: 4px;
+    width: 100%;
+}
+
+.ahora b.morado {
+    color: #38205E;
+    font-size: 30px !important;
+}
+
+.antes,
+.ahora {
+    line-height: 30px;
+}
+
+.dividendo span,
+.entrega span {
+    font-size: 14px;
+    letter-spacing: 1.12px;
+    line-height: 17px;
+
+}
+
+.basesLegales {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+footer {
+    max-width: 100%;
+    background-color: #38205E;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social img {
+    transition: all ease-in;
+}
+
+.social img:hover {
+    scale: 1.2;
+}
+
+.social a {
+    text-decoration: none;
+}
+
+@media (max-width:767px) {
+    .grilla {
+        grid-template-columns: auto;
+    }
+
+    .logoFooter a img {
+        width: 85%;
+    }
+
+    .footer {
+        column-gap: 0px;
+    }
+
+    .carousel {
+        height: 300px;
+    }
+
+    .item,
+    .slick-list,
+    .slick-track,
+    .item img {
+        height: 100%;
+    }
+
+    .filtro {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width:767px) and (max-width:1023px) {
+    .grilla {
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 0.5rem;
+        grid-row-gap: 1.5rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .logoFooter a img {
+        width: 85%;
+    }
+
+    .footer {
+        column-gap: 0px;
+    }
+
+    .carousel {
+        height: 300px;
+    }
+
+    .item,
+    .slick-list,
+    .slick-track,
+    .item img {
+        height: 100%;
+    }
+
+    .filtro {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
